@@ -129,6 +129,7 @@ Jira, Notion, Figma, Google Spread Sheet, Slack, Tableau(긴급 분석용)
 
 | 프로젝트 | 경로 | 설명 |
 |----------|------|------|
-| nexus-api | `~/caring/nexus/nexus-api/` | Nexus 플랫폼 API (Kotlin/Spring Boot, RBAC 설계) |
-| erp-webscraper | `~/caring/webscraper/erp-webscraper/` | ERP 웹스크래퍼 (Playwright, 공단포털/SSIS) |
-| 케슐랭 | `~/study/caring_michelin_guide/` | 사내 점심 미슐랭 가이드 (사이드 프로젝트) |
+| cms-api | `api/caats/cms-api/` | CAATS API (Kotlin/Spring Boot) — 상담·매칭 |
+| erp-api | `api/erp/erp-api/` | ERP API (Kotlin/Spring Boot, MyBatis) — 행정업무 운영 |
+| nexus-api | `api/nexus/nexus-api/` | Nexus 플랫폼 API (Kotlin/Spring Boot, RBAC 설계) |
+| erp-webscraper | `api/webscraper/erp-webscraper/` | ERP 웹스크래퍼 (Playwright, 공단포털/SSIS) |
