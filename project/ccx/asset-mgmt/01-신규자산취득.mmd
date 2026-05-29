@@ -1,0 +1,18 @@
+flowchart TD
+    Start([신규 자산 등록 시작]) --> Common[자산 공통 정보 입력<br/>자산번호·분류·단가·모델명 등]
+    Common --> ClassCheck{소분류 존재?}
+    ClassCheck -->|있음| Detail
+    ClassCheck -->|없음| Etc[소분류 = 기타]
+    Etc --> Detail
+
+    Detail[자산 유형별 상세 정보 입력<br/>분류별 동적 필드] --> Loc[초기 위치 지정<br/>본사 재고 / 센터]
+    Loc --> Owner{초기 owner?}
+    Owner -->|미지정| Wh[본사 재고 상태]
+    Owner -->|사용자| UserAssign[사용자 매핑]
+    Owner -->|조직| OrgAssign[조직 공용 매핑]
+
+    Wh --> Save
+    UserAssign --> Save
+    OrgAssign --> Save
+
+    Save[자산 마스터 등록<br/>+ 등록 이력 기록] --> End([등록 완료])
